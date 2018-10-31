@@ -1,0 +1,106 @@
+<!doctype html>    
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title></title>
+
+    <meta name="author" content="Thao Thanh Luu">
+
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+    <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="css.css" type="text/css" />
+    
+    <script src='expression.js'></script>
+    <script src="calculator.js"></script>
+    
+    <script>
+    
+    var calc;
+    
+    // init
+    addEventListener('DOMContentLoaded', function() {
+        
+        calc = new Calculator();
+        
+        // prevent page scrolling
+        document.body.addEventListener('touchmove', function(e) {
+            
+            e.preventDefault();
+            
+            return false;
+            
+        }, false);
+    
+    }, false);
+    
+    </script>
+    
+</head>
+
+<body>
+    <div id="calculator">
+        
+        <div id="screen">
+            <div id="top">
+                
+            </div>
+            <div id="bottom">
+                0
+            </div>
+        </div>
+        
+        <div id="buttons">
+            
+            <section class="block" id="commands">
+                <button class="command" data-command="clear">Clear</button>                
+                <button class="command" data-command="backspace">Backspace</button>
+                <button class="operator" data-operator="^">x<sup>y</sup></button>
+
+            </section>
+
+            
+            <section class="block" id="basic">
+                
+                <div>
+                    <button class="number" data-value="7">7</button>
+                    <button class="number" data-value="8">8</button>
+                    <button class="number" data-value="9">9</button>
+                    <button class="paren" data-paren="(">(</button>
+                    <button class="paren" data-paren=")">)</button>
+                </div>
+                
+                <div>
+                    <button class="number" data-value="4">4</button>
+                    <button class="number" data-value="5">5</button>
+                    <button class="number" data-value="6">6</button>
+                    <button class="operator" data-operator="*">&#215;</button>
+                    <button class="operator" data-operator="/">&divide;</button>
+                </div>
+                
+                <div>
+                    <button class="number" data-value="1">1</button>
+                    <button class="number" data-value="2">2</button>
+                    <button class="number" data-value="3">3</button>
+                    <button class="operator" data-operator="+">+</button>
+                    <button class="operator" data-operator="-">&mdash;</button>
+                </div>
+                
+                <div>
+                    <button class="number" data-value="0">0</button>
+                    <button class="modifier" data-modifier="decimal" id="decimal">&bull;</button>
+                    <button class="modifier" data-modifier="plusminus" id="plusminus">+/&ndash;</button>
+                    <button class="command" data-command="evaluate" id="equals">=</button>
+                </div>
+                
+            </section>
+            
+        </div>
+        
+    </div>
+</body>
+</html>
