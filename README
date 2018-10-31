@@ -1,0 +1,5 @@
+CS480 Lab
+
+The current Calculator will be able to provide basis operation.
+Testing has been completed regarding parenthesis errors.
+Calculator will report error if divided by 0.
